@@ -1,0 +1,260 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-size: 48px;
+}
+ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px solid rgb(0, 47, 202);
+    flex-wrap: wrap;
+}
+
+a:hover {
+    color: blue;
+    font-size: 20px;
+    transition: 0.1s;
+}
+.section {
+    width:auto;
+    height:500px;
+    background-color: #EF5354;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 10px 5px;
+    border-radius: 20px;
+    padding: 50px;
+}
+  
+.one {
+    background: rgb(236,236,236);
+    background: radial-gradient(circle, rgba(236,236,236,1) 0%, rgba(186,186,186,1) 50%, rgba(119,119,119,1) 100%);
+    border: 5px solid rgb(0, 0, 0);
+
+}
+.two {
+    background-color: rgb(236,236,236);
+    background: radial-gradient(circle, rgba(236,236,236,1) 0%, rgba(186,186,186,1) 50%, rgba(119,119,119,1) 100%);
+    height:745px;
+    border: 5px solid rgb(0, 0, 0);
+    
+}
+.three {
+    background: rgb(236,236,236);
+    background: radial-gradient(circle, rgba(236,236,236,1) 0%, rgba(186,186,186,1) 50%, rgba(119,119,119,1) 100%);
+    height:900px;
+    border: 5px solid rgb(0, 0, 0);
+}
+.four {
+    background: rgb(236,236,236);
+    background: radial-gradient(circle, rgba(236,236,236,1) 0%, rgba(186,186,186,1) 50%, rgba(119,119,119,1) 100%);
+    border: 5px solid rgb(0, 0, 0);
+}
+.one:hover {
+    border: 5px solid rgb(31, 0, 172);
+    transition: 0.5s;
+}
+.two:hover {
+    border: 5px solid rgb(31, 0, 172);
+    transition: 0.5s;
+}
+.three:hover {
+    border: 5px solid rgb(31, 0, 172);
+    transition: 0.5s;
+}
+
+.four:hover {
+    border: 5px solid rgb(31, 0, 172);
+    transition: 0.5s;
+}
+  
+.bouton {
+    color: rgb(0, 0, 0);
+    height: 40px;
+    width: 180px;
+    padding: 8px;
+    text-align: center;
+    border: 2px solid black;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.moi {
+    font-size: 30px;
+}
+
+.container1 {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    
+    
+}
+
+.container1 div {
+    width: 800px;
+    height: 400px;
+}
+
+.projettext {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.nav1:hover .anime1 {
+    animation-name: anime1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.rotation {
+    display: block;
+    animation: 5s infinite linear tour;
+}
+
+@keyframes tour {
+    0% {
+        transform: rotate(0);
+        
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.anime:hover {
+    animation-name: miam2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes miam2 {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(0px) translateY(20px);
+    }
+}
+
+
+
+
+@media screen and (max-width:800px) {
+    h1 {
+        font-size: 40px;
+    }
+    .container {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .moi {
+        font-size: 20px;
+    }
+
+    .section {
+        font-size: 30px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .projettext {
+        font-size: 20px;
+        
+    }
+
+    .section {
+        height: auto;
+    }
+
+    .projettext {
+        padding-top: 10px;
+    }
+
+    .two {
+        height: 800px;
+    }
+
+    .three {
+        margin-top: 545px;
+    }
+
+    .container1 {
+        height: 0px;
+    }
+    .bouton {
+        width: 300px;
+        font-size: 20px;
+    }
+
+    
+
+    /* 
+    TODO:
+    pour la classe section virer ou réduire le padding
+    pour la classe projettext virer ou réduire le pading top
+    pour la classe two virer ou réduire le height
+    pour la classe section ajouter de la margin top
+    pour la classe container1 virer le height
+
+    pour la classe projettext virer le height
+    pour la classe two virer le height et width
+    pour la classe container virer les max width
+    boutton ul taille 80% et hover taille police
+    enlever height 40 des boutons
+    */
+}
+@media screen and (max-width: 1020px) {
+    nav {
+        flex-direction: column;
+    }
+
+    ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
